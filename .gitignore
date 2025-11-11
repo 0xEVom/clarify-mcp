@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Virtual environments
+.venv/
+.env
+.env*/
+
+# macOS
+.DS_Store
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Byte-compiled / caches
+*.pyo
+*.pyd
+*.pyd
+*.pdb
+
+# Tests/coverage
+.coverage
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log
+
+# MCP related (if any local cache)
+.mcp-cache/
+
