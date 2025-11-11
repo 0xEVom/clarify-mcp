@@ -18,11 +18,14 @@ Minimal MCP server that exposes a single `clarify` tool to elicit free-text clar
 
 ```bash
 python3 -m venv .venv
-. .venv/bin/activate
-pip install -U pip
-pip install -r requirements.txt
-python server.py
+./.venv/bin/python3 -m pip install --upgrade pip
+./.venv/bin/python3 -m pip install -r requirements.txt
+./.venv/bin/python3 server.py
 ```
+
+macOS notes:
+- Always call the venv interpreter directly (`./.venv/bin/python3 -m pip ...`) to avoid PEP 668 issues.
+- If you get ENOENT for `.venv/bin/python3`, delete `.venv` and recreate it with `python3 -m venv .venv`.
 
 ## Configure in Cursor (`~/.cursor/mcp.json`)
 
@@ -32,7 +35,7 @@ Add this entry:
 {
   "mcpServers": {
     "clarify": {
-      "command": ".venv/bin/python",
+      "command": ".venv/bin/python3",
       "args": [
         "server.py"
       ],
